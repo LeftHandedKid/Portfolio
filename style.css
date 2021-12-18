@@ -6,7 +6,8 @@ Variables
 
 :root {
     --backgroundColor: whitesmoke;
-    --secondBgColor: rgb(180, 226, 255);
+    --backgroundColorTwo: rgb(0, 0, 0);
+    --hoverColor: rgb(180, 226, 255);
     --primaryColor: rgba(0, 0, 0, 0.85);
     --secondaryColor: rgba(30, 169, 255, 1);
     --primaryFont: Calibri, Verdana, sans-serif;
@@ -30,7 +31,7 @@ body {
     color: var(--primaryColor);
     font-family: var(--primaryFont);
     font-size: 1.25rem;
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.5;
     color: var(--secondaryColor);
 }
@@ -75,7 +76,7 @@ Header
 
     header nav ul li:hover {
         transition: var(--transition);
-        color: var(--secondBgColor);
+        color: var(--hoverColor);
     }
 
     .nav-list {
@@ -123,7 +124,7 @@ Header
 
     header nav ul li:hover {
         transition: var(--transition);
-        color: var(--secondBgColor);
+        color: var(--hoverColor);
     }
 
     .navicon {
@@ -149,10 +150,94 @@ Header
     header nav {
         min-width: 50vw;
     }
+
+    header nav ul {
+        justify-content: space-between;
+    }
 }
 
 /* 
 ========
-Home
+About
 ========
 */
+
+@media only screen and (max-width: 650px) {
+    #about {
+        color: var(--backgroundColorTwo);
+        transform: rotate(335deg);
+        font-size: 2rem;
+        margin-bottom: 12rem;
+    }
+
+    .article-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+        margin-left: 1rem;
+    }
+
+    .article-about p {
+        width: 75vw;
+        text-align: start;
+        font-size: 1.35rem;
+    }
+}
+
+@media only screen and (min-width: 651px) {
+    #about {
+        color: var(--backgroundColorTwo);
+        font-size: 2.5rem;
+        margin-bottom: 5rem;
+        margin-left: 1rem;
+        transform: rotate(352deg);
+    }
+
+    .article-about {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2.5rem;
+    }
+
+    .article-about img {
+        margin: 0 5rem;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .article-about p {
+        width: 50vw;
+        font-size: 1.35rem;
+        margin-right: 3rem;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #about {
+        transform: rotate(355deg);
+    }
+
+    .article-about {
+        margin-top: 4rem;
+    }
+
+    .article-about img {
+        margin: 0 7rem;
+    }
+
+    .article-about p {
+        font-size: 1.6rem;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    #about {
+        font-size: 3.5rem;
+        margin-left: 2rem;
+    }
+
+    .article-about p {
+        width: 40vw;
+    }
+}

@@ -45,7 +45,39 @@ Header
 ========
 */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        border: 5px solid black;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+
+        background-color: var(--primaryColor);
+    }
+
+    header nav {
+        min-width: 50vw;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header nav ul li {
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    header nav ul li:hover {
+        transition: var(--transition);
+        color: var(--secondBgColor);
+    }
+
     .nav-list {
         display: none;
     }
@@ -61,43 +93,66 @@ Header
     }
 }
 
-/* @media only screen and (min-width: 600px) { */
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+@media only screen and (min-width: 651px) {
+    header {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
 
-    border: 5px solid black;
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
+        border: 5px solid black;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
 
-    background-color: var(--primaryColor);
+        background-color: var(--primaryColor);
+    }
+
+    header nav {
+        min-width: 70vw;
+    }
+
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    header nav ul li {
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    header nav ul li:hover {
+        transition: var(--transition);
+        color: var(--secondBgColor);
+    }
+
+    .navicon {
+        display: none;
+    }
 }
 
-header nav {
-    min-width: 50vw;
+@media only screen and (min-width: 900px) {
+    header {
+        font-size: 1.4rem;
+    }
+
+    header nav {
+        min-width: 60vw;
+    }
 }
 
-header nav ul {
-    display: flex;
-    justify-content: space-between;
-}
+@media only screen and (min-width: 1050px) {
+    header {
+        font-size: 1.5rem;
+    }
 
-header nav ul li {
-    transition: var(--transition);
-    cursor: pointer;
+    header nav {
+        min-width: 50vw;
+    }
 }
-
-header nav ul li:hover {
-    transition: var(--transition);
-    color: var(--secondBgColor);
-}
-
-/* } */
 
 /* 
 ========
-Header
+Home
 ========
 */

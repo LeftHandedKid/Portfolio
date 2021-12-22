@@ -9,10 +9,14 @@ Variables
     --backgroundColorTwo: rgb(0, 0, 0);
     --hoverColor: rgb(180, 226, 255);
     --primaryColor: rgba(0, 0, 0, 0.85);
-    --secondaryColor: rgba(30, 169, 255, 1);
+    --secondaryColor: rgb(30, 169, 255);
     --primaryFont: Calibri, Verdana, sans-serif;
     --transition: all 0.5s linear;
 }
+
+
+
+
 
 /* 
 ========
@@ -40,6 +44,10 @@ ul {
     list-style-type: none;
 }
 
+
+
+
+
 /* 
 ========
 Header
@@ -52,12 +60,12 @@ Header
         justify-content: space-around;
         align-items: center;
 
-        border: 5px solid black;
         position: -webkit-sticky;
         position: sticky;
         top: 0;
 
-        background-color: var(--primaryColor);
+        background-color: var(--backgroundColorTwo);
+        z-index: 1;
     }
 
     header nav {
@@ -156,6 +164,10 @@ Header
     }
 }
 
+
+
+
+
 /* 
 ========
 About
@@ -163,11 +175,21 @@ About
 */
 
 @media only screen and (max-width: 650px) {
+
+    /* adjusted the rotation here with margins so the navicon button can be clicked without having the rotation interfere with the click */
     #about {
-        color: var(--backgroundColorTwo);
-        transform: rotate(335deg);
+        color: var(--backgroundColor);
         font-size: 2rem;
-        margin-bottom: 12rem;
+        /* margin: top right bottom left */
+        margin: 5rem 1vw 5rem 50vw;
+        text-align: center;
+
+        background-color: var(--primaryColor);
+        border-radius: 7px;
+        transform: rotate(25deg);
+        z-index: 2;
+        text-shadow: 1px 1px 10px #1ea9ff,
+        0 0 4px #1ea9ff;
     }
 
     .article-about {
@@ -191,7 +213,7 @@ About
         font-size: 2.5rem;
         margin-bottom: 5rem;
         margin-left: 1rem;
-        transform: rotate(352deg);
+        transform: rotate(355deg);
     }
 
     .article-about {
@@ -215,7 +237,7 @@ About
 
 @media only screen and (min-width: 900px) {
     #about {
-        transform: rotate(355deg);
+        transform: rotate(357deg);
     }
 
     .article-about {
@@ -241,3 +263,114 @@ About
         width: 40vw;
     }
 }
+
+
+
+
+
+/* 
+========
+Skills
+========
+*/
+
+@media only screen and (max-width: 650px) {
+    #skills {
+        color: var(--backgroundColor);
+        font-size: 2rem;
+        /* margin: top right bottom left */
+        margin: 10rem 50vw 5rem 1vw;
+        text-align: center;
+
+        background-color: var(--primaryColor);
+        border-radius: 7px;
+        z-index: 2;
+        transform: rotate(335deg);
+        text-shadow: 1px 1px 10px #1ea9ff,
+        0 0 4px #1ea9ff;
+    }
+}
+
+@media only screen and (min-width: 651px) {
+    .section-skills {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {}
+
+@media only screen and (min-width: 1200px) {}
+
+
+
+
+
+/* 
+========
+Portfolio
+========
+*/
+
+@media only screen and (max-width: 650px) {
+    #portfolio {
+        color: var(--backgroundColor);
+        font-size: 2rem;
+        /* margin: top right bottom left */
+        margin: 5rem 1vw 5rem 50vw;
+        text-align: center;
+
+        background-color: var(--primaryColor);
+        border-radius: 7px;
+        transform: rotate(25deg);
+        z-index: 2;
+        text-shadow: 1px 1px 10px #1ea9ff,
+        0 0 4px #1ea9ff;
+    }
+}
+
+@media only screen and (min-width: 651px) {
+    .section-portfolio {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {}
+
+@media only screen and (min-width: 1200px) {}
+
+
+
+
+
+/* 
+========
+Contact
+========
+*/
+
+@media only screen and (max-width: 650px) {
+    #contact {
+        color: var(--backgroundColor);
+        font-size: 2rem;
+        /* margin: top right bottom left */
+        margin: 10rem 50vw 5rem 1vw;
+        text-align: center;
+
+        background-color: var(--primaryColor);
+        border-radius: 7px;
+        z-index: 2;
+        transform: rotate(335deg);
+        text-shadow: 1px 1px 10px #1ea9ff,
+            0 0 4px #1ea9ff;
+    }
+}
+
+@media only screen and (min-width: 651px) {
+    .section-contact {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 900px) {}
+
+@media only screen and (min-width: 1200px) {}

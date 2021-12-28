@@ -50,11 +50,47 @@ ul {
 
 /* 
 ========
-Header
+Header/Home
 ========
 */
 
 @media only screen and (max-width: 650px) {
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        height: 100vh;
+        font-size: 1.75rem;
+        background-color: var(--backgroundColorTwo);
+        /* background: linear-gradient(rgba(180, 226, 255, 0.5), rgba(30, 169, 255, 0.9)),
+        url('./pexels-hitarth-jadhav-220357.jpg') center/cover no-repeat; */
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+            url('./images/pexels-hitarth-jadhav-220357.jpg') center/cover no-repeat;
+    }
+
+    div article p {
+        margin-bottom: 10vh;
+    }
+
+    div article button {
+        background: none;
+        border: 1px solid var(--secondaryColor);
+        border-radius: 3px;
+
+        font-size: 1.5rem;
+        color: var(--backgroundColor);
+        padding: 0.5rem 1rem;
+    }
+
+    div article button:active {
+        background-color: var(--hoverColor);
+        color: var(--backgroundColorTwo);
+        border: 1px solid var(--secondaryColor);
+    }
+
     header {
         display: flex;
         justify-content: space-around;
@@ -65,7 +101,8 @@ Header
         top: 0;
 
         background-color: var(--backgroundColorTwo);
-        z-index: 1;
+        height: 15vh;
+        z-index: 2;
     }
 
     header nav {
@@ -91,252 +128,282 @@ Header
         display: none;
     }
 
+    /* needed class for nav to do flex */
     .navbar {
         display: flex;
         justify-content: flex-end;
     }
 
     .navicon {
-        margin-top: 1.75vh;
-        cursor: pointer;
-    }
-}
-
-@media only screen and (min-width: 651px) {
-    header {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        border: 5px solid black;
-        position: -webkit-sticky;
-        position: sticky;
-        top: 0;
-
-        background-color: var(--primaryColor);
-    }
-
-    header nav {
-        min-width: 70vw;
-    }
-
-    header nav ul {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    header nav ul li {
-        transition: var(--transition);
+        margin-top: 1.25vh;
         cursor: pointer;
     }
 
-    header nav ul li:hover {
-        transition: var(--transition);
-        color: var(--hoverColor);
+    @media only screen and (min-width: 651px) {
+        header {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            border: 5px solid black;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+
+            background-color: var(--primaryColor);
+        }
+
+        header nav {
+            min-width: 70vw;
+        }
+
+        header nav ul {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        header nav ul li {
+            transition: var(--transition);
+            cursor: pointer;
+        }
+
+        header nav ul li:hover {
+            transition: var(--transition);
+            color: var(--hoverColor);
+        }
+
+        .navicon {
+            display: none;
+        }
     }
 
-    .navicon {
-        display: none;
-    }
-}
+    @media only screen and (min-width: 900px) {
+        header {
+            font-size: 1.4rem;
+        }
 
-@media only screen and (min-width: 900px) {
-    header {
-        font-size: 1.4rem;
-    }
-
-    header nav {
-        min-width: 60vw;
-    }
-}
-
-@media only screen and (min-width: 1050px) {
-    header {
-        font-size: 1.5rem;
+        header nav {
+            min-width: 60vw;
+        }
     }
 
-    header nav {
-        min-width: 50vw;
+    @media only screen and (min-width: 1050px) {
+        header {
+            font-size: 1.5rem;
+        }
+
+        header nav {
+            min-width: 50vw;
+        }
+
+        header nav ul {
+            justify-content: space-between;
+        }
     }
 
-    header nav ul {
-        justify-content: space-between;
-    }
-}
 
 
 
 
-
-/* 
+    /* 
 ========
 About
 ========
 */
 
-@media only screen and (max-width: 650px) {
+    @media only screen and (max-width: 650px) {
 
-    /* adjusted the rotation here with margins so the navicon button can be clicked without having the rotation interfere with the click */
-    #about {
-        color: var(--backgroundColor);
-        font-size: 2rem;
-        /* margin: top right bottom left */
-        margin: 5rem 1vw 5rem 50vw;
-        text-align: center;
+        /* adjusted the rotation here with margins so the navicon button can be clicked without having the rotation interfere with the click */
+        #about {
+            color: var(--backgroundColor);
+            font-size: 2rem;
+            margin: 10vh 25vw 5vh;
+            text-align: center;
 
-        background-color: var(--primaryColor);
-        border-radius: 7px;
-        transform: rotate(25deg);
-        z-index: 2;
-        text-shadow: 1px 1px 10px #1ea9ff,
-        0 0 4px #1ea9ff;
+            background-color: var(--primaryColor);
+            border-radius: 7px;
+            text-shadow: 1px 1px 10px #1ea9ff, 0 0 4px #1ea9ff;
+        }
+
+        .article-about {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5vh 5vw 0vh;
+        }
+
+        .article-about p {
+            width: 75vw;
+            text-align: start;
+            font-size: 1.35rem;
+        }
+
+        .profile-img {
+            border-radius: 50%;
+            width: 50%;
+            margin-bottom: 5vh;
+        }
     }
 
-    .article-about {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 5rem;
-        margin-left: 1rem;
+    @media only screen and (min-width: 651px) {
+        #about {
+            color: var(--backgroundColorTwo);
+            font-size: 2.5rem;
+            margin-bottom: 5rem;
+            margin-left: 1rem;
+            transform: rotate(355deg);
+        }
+
+        .article-about {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2.5rem;
+        }
+
+        .article-about img {
+            margin: 0 5rem;
+            justify-self: center;
+            align-self: center;
+        }
+
+        .article-about p {
+            width: 50vw;
+            font-size: 1.35rem;
+            margin-right: 3rem;
+        }
     }
 
-    .article-about p {
-        width: 75vw;
-        text-align: start;
-        font-size: 1.35rem;
-    }
-}
+    @media only screen and (min-width: 900px) {
+        #about {
+            transform: rotate(357deg);
+        }
 
-@media only screen and (min-width: 651px) {
-    #about {
-        color: var(--backgroundColorTwo);
-        font-size: 2.5rem;
-        margin-bottom: 5rem;
-        margin-left: 1rem;
-        transform: rotate(355deg);
-    }
+        .article-about {
+            margin-top: 4rem;
+        }
 
-    .article-about {
-        display: flex;
-        justify-content: space-around;
-        margin-top: 2.5rem;
+        .article-about img {
+            margin: 0 7rem;
+        }
+
+        .article-about p {
+            font-size: 1.6rem;
+        }
     }
 
-    .article-about img {
-        margin: 0 5rem;
-        justify-self: center;
-        align-self: center;
+    @media only screen and (min-width: 1200px) {
+        #about {
+            font-size: 3.5rem;
+            margin-left: 2rem;
+        }
+
+        .article-about p {
+            width: 40vw;
+        }
     }
 
-    .article-about p {
-        width: 50vw;
-        font-size: 1.35rem;
-        margin-right: 3rem;
-    }
-}
-
-@media only screen and (min-width: 900px) {
-    #about {
-        transform: rotate(357deg);
-    }
-
-    .article-about {
-        margin-top: 4rem;
-    }
-
-    .article-about img {
-        margin: 0 7rem;
-    }
-
-    .article-about p {
-        font-size: 1.6rem;
-    }
-}
-
-@media only screen and (min-width: 1200px) {
-    #about {
-        font-size: 3.5rem;
-        margin-left: 2rem;
-    }
-
-    .article-about p {
-        width: 40vw;
-    }
-}
 
 
 
 
-
-/* 
+    /* 
 ========
 Skills
 ========
 */
 
-@media only screen and (max-width: 650px) {
-    #skills {
-        color: var(--backgroundColor);
-        font-size: 2rem;
-        /* margin: top right bottom left */
-        margin: 10rem 50vw 5rem 1vw;
-        text-align: center;
+    @media only screen and (max-width: 650px) {
+        #skills {
+            color: var(--backgroundColor);
+            font-size: 2rem;
+            margin: 10vh 25vw 5vh;
+            text-align: center;
 
-        background-color: var(--primaryColor);
-        border-radius: 7px;
-        z-index: 2;
-        transform: rotate(335deg);
-        text-shadow: 1px 1px 10px #1ea9ff,
-        0 0 4px #1ea9ff;
+            background-color: var(--primaryColor);
+            border-radius: 7px;
+            text-shadow: 1px 1px 10px #1ea9ff,
+                0 0 4px #1ea9ff;
+        }
     }
-}
 
-@media only screen and (min-width: 651px) {
-    .section-skills {
-        display: none;
+    @media only screen and (min-width: 651px) {
+        .section-skills {
+            display: none;
+        }
     }
-}
 
-@media only screen and (min-width: 900px) {}
+    @media only screen and (min-width: 900px) {}
 
-@media only screen and (min-width: 1200px) {}
-
+    @media only screen and (min-width: 1200px) {}
 
 
 
 
-/* 
+
+    /* 
 ========
 Portfolio
 ========
 */
 
-@media only screen and (max-width: 650px) {
-    #portfolio {
-        color: var(--backgroundColor);
-        font-size: 2rem;
-        /* margin: top right bottom left */
-        margin: 5rem 1vw 5rem 50vw;
-        text-align: center;
+    @media only screen and (max-width: 650px) {
+        #portfolio {
+            color: var(--backgroundColor);
+            font-size: 2rem;
+            margin: 10vh 25vw 5vh;
+            text-align: center;
 
-        background-color: var(--primaryColor);
-        border-radius: 7px;
-        transform: rotate(25deg);
-        z-index: 2;
-        text-shadow: 1px 1px 10px #1ea9ff,
-        0 0 4px #1ea9ff;
+            background-color: var(--primaryColor);
+            border-radius: 7px;
+            text-shadow: 1px 1px 10px #1ea9ff,
+                0 0 4px #1ea9ff;
+        }
     }
-}
 
-@media only screen and (min-width: 651px) {
-    .section-portfolio {
-        display: none;
+    @media only screen and (min-width: 651px) {
+        .section-portfolio {
+            display: none;
+        }
     }
+
+    @media only screen and (min-width: 900px) {}
+
+    @media only screen and (min-width: 1200px) {}
+
+
+
+
+
+    /* 
+========
+Contact
+========
+*/
+
+    @media only screen and (max-width: 650px) {
+        #contact {
+            color: var(--backgroundColor);
+            font-size: 2rem;
+            margin: 10vh 25vw 5vh;
+            text-align: center;
+
+            background-color: var(--primaryColor);
+            border-radius: 7px;
+            text-shadow: 1px 1px 10px #1ea9ff,
+                0 0 4px #1ea9ff;
+        }
+    }
+
+    @media only screen and (min-width: 651px) {
+        .section-contact {
+            display: none;
+        }
+    }
+
+    @media only screen and (min-width: 900px) {}
+
+    @media only screen and (min-width: 1200px) {}
 }
-
-@media only screen and (min-width: 900px) {}
-
-@media only screen and (min-width: 1200px) {}
 
 
 
@@ -344,33 +411,34 @@ Portfolio
 
 /* 
 ========
-Contact
+Footer
 ========
 */
 
-@media only screen and (max-width: 650px) {
-    #contact {
-        color: var(--backgroundColor);
-        font-size: 2rem;
-        /* margin: top right bottom left */
-        margin: 10rem 50vw 5rem 1vw;
-        text-align: center;
-
-        background-color: var(--primaryColor);
-        border-radius: 7px;
-        z-index: 2;
-        transform: rotate(335deg);
-        text-shadow: 1px 1px 10px #1ea9ff,
-            0 0 4px #1ea9ff;
-    }
+footer {
+    display: flex;
+    /* justify-content: ce; */
+    background-color: var(--backgroundColorTwo);
+    height: 10vh;
 }
 
-@media only screen and (min-width: 651px) {
-    .section-contact {
-        display: none;
-    }
+footer p {
+    font-size: 0.75rem;
+    width: 50vw;
+    margin-left: 5vw;
+    align-self: center;
 }
 
-@media only screen and (min-width: 900px) {}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    font-size: 1.5rem;
+    width: 25vw;
+    margin-left: 15vw;
+}
 
-@media only screen and (min-width: 1200px) {}
+footer ul li a {
+    color: var(--secondaryColor);
+}

@@ -6,10 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Isaiah's Portfolio</title>
 </head>
 
 <body>
+    <div>
+        <article>
+            <h2>Welcome. I'm Isaiah!</h2>
+            <p>And this is my portfolio!</p>
+            <button type="button">EXPLORE</button>
+        </article>
+    </div>
     <header>
         <h1>Isaiah</h1>
         <nav class="navbar">
@@ -27,7 +37,7 @@
     <section class="section-about">
         <h3 id="about">About Me</h3>
         <article class="article-about">
-            <img src="" alt="picture of Isaiah">
+            <img class="profile-img" src="./images/pic_of_me.jpg" alt="picture of Isaiah">
             <p>
                 Hi! My name is Isaiah, and I'm an aspiring web developer. Currently, I am a computer science student at
                 WGU. I enjoy learning new technologies, honing my
@@ -37,23 +47,26 @@
         </article>
     </section>
 
-    <section class="section-skills">
+    <!-- <section class="section-skills">
         <h3 id="skills">Skills</h3>
         <article class="article-skills">
             <ul>
-                <li>javascript</li>
-                <li>mongodb</li>
-                <li>html</li>
-                <li>css</li>
-                <li>react</li>
-                <li>node/express</li>
-                <li>php</li>
+                <li>
+                    HTML5
+                    <span>/</span>
+                    CSS3
+                </li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>
+                    Node
+                    <span>/</span>
+                    Express
+                </li>
+                <li>MongoDB</li>
             </ul>
         </article>
-        <!-- show a list of skills/languages that i feel proficient in! -->
-        <!-- prob show them in a fancy table... look up ideas if need be -->
-        <!-- dont use percentage bar or anything that gives a number... ppl dont like that -->
-    </section>
+    </section> -->
 
     <section class="section-portfolio">
         <h3 id="portfolio">Portfolio</h3>
@@ -73,15 +86,22 @@
     </section>
 
     <footer>
-        <nav>
-            <!-- social media links -->
-            <!-- design properly...  when hovered, make sure it glows -->
-            <ul>
-                <li>linkedIn</li>
-                <li>quora</li>
-                <li>github</li>
-            </ul>
-        </nav>
+        <p>
+            Copyright &copy 2021 | All rights reserved
+        </p>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/isaiah-bonner-248a5b11b/" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <!-- <li><i class="fab fa-quora"></i></li> -->
+            <li>
+                <a href="https://github.com/LeftHandedKid" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+        </ul>
     </footer>
 </body>
 

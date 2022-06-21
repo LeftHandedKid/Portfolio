@@ -100,8 +100,9 @@ Header/HeroImg
         top: 0;
 
         background-color: var(--backgroundColorTwo);
-        height: 15vh;
+        height: 10vh;
         z-index: 2;
+        font-size: 1rem;
     }
 
     header h1 {
@@ -167,6 +168,11 @@ Header/HeroImg
         font-size: 1.5rem;
     }
 
+    header {
+        height: 10vh;
+        font-size: 1.25rem;
+    }
+
     header nav ul {
         display: flex;
         justify-content: space-around;
@@ -193,6 +199,7 @@ Header/HeroImg
     }
 
     header {
+        height: 11vh;
         font-size: 1.4rem;
     }
 

@@ -62,7 +62,7 @@ Header/HeroImg
         justify-content: center;
         text-align: center;
 
-        height: 100vh;
+        height: 105vh;
         font-size: 1.75rem;
         background-color: var(--backgroundColorTwo);
         background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
@@ -84,6 +84,10 @@ Header/HeroImg
         padding: 0.5rem 1rem;
     }
 
+    #hero-img button:hover {
+        background-color: var(--secondaryColor);
+    }
+
     #hero-img button:active {
         background-color: var(--hoverColor);
         color: var(--backgroundColorTwo);
@@ -103,6 +107,7 @@ Header/HeroImg
         height: 10vh;
         z-index: 2;
         font-size: 1rem;
+        margin-bottom: 10vh;
     }
 
     header h1 {
@@ -150,20 +155,6 @@ Header/HeroImg
 }
 
 @media only screen and (min-width: 720px) {
-    #hero-img {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-
-        height: 100vh;
-        font-size: 2rem;
-        background-color: var(--backgroundColorTwo);
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
-            url('./images/pexels-hitarth-jadhav-220357.jpg') center/cover no-repeat;
-    }
-
     #hero-img button {
         font-size: 1.5rem;
     }
@@ -191,16 +182,11 @@ Header/HeroImg
 
 @media only screen and (min-width: 1024px) {
     #hero-img {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     #hero-img button {
-        font-size: 1.75rem
-    }
-
-    header {
-        height: 11vh;
-        font-size: 1.4rem;
+        font-size: 1.5rem
     }
 
     .navicon {
@@ -287,6 +273,7 @@ About
         width: 65vw;
         font-size: 1.35rem;
         margin-left: 5vw;
+        text-align: justify;
     }
 
     .profile-img {

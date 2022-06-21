@@ -50,12 +50,12 @@ ul {
 
 /* 
 ========
-Header/Home
+Header/HeroImg
 ========
 */
 
-@media only screen and (max-width: 650px) {
-    div {
+@media only screen and (min-width: 320px) {
+    #hero-img {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -65,27 +65,26 @@ Header/Home
         height: 100vh;
         font-size: 1.75rem;
         background-color: var(--backgroundColorTwo);
-        /* background: linear-gradient(rgba(180, 226, 255, 0.5), rgba(30, 169, 255, 0.9)),
-        url('./pexels-hitarth-jadhav-220357.jpg') center/cover no-repeat; */
         background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
             url('./images/pexels-hitarth-jadhav-220357.jpg') center/cover no-repeat;
     }
 
-    div article p {
+    /* remember to use gap property instead of margin if possible on the other media queries */
+    #hero-img p {
         margin-bottom: 10vh;
     }
 
-    div article button {
+    #hero-img button {
         background: none;
         border: 1px solid var(--secondaryColor);
         border-radius: 3px;
 
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: var(--backgroundColor);
         padding: 0.5rem 1rem;
     }
 
-    div article button:active {
+    #hero-img button:active {
         background-color: var(--hoverColor);
         color: var(--backgroundColorTwo);
         border: 1px solid var(--secondaryColor);
@@ -103,6 +102,10 @@ Header/Home
         background-color: var(--backgroundColorTwo);
         height: 15vh;
         z-index: 2;
+    }
+
+    header h1 {
+        margin-right: 15vw;
     }
 
     header nav {
@@ -139,271 +142,289 @@ Header/Home
         cursor: pointer;
     }
 
-    @media only screen and (min-width: 651px) {
-        header {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
+    .navicon:active {
+        transform: rotate(90deg);
+        transition: var(--transition);
+    }
+}
 
-            border: 5px solid black;
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
+@media only screen and (min-width: 720px) {
+    #hero-img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
 
-            background-color: var(--primaryColor);
-        }
-
-        header nav {
-            min-width: 70vw;
-        }
-
-        header nav ul {
-            display: flex;
-            justify-content: space-around;
-        }
-
-        header nav ul li {
-            transition: var(--transition);
-            cursor: pointer;
-        }
-
-        header nav ul li:hover {
-            transition: var(--transition);
-            color: var(--hoverColor);
-        }
-
-        .navicon {
-            display: none;
-        }
+        height: 100vh;
+        font-size: 2rem;
+        background-color: var(--backgroundColorTwo);
+        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+            url('./images/pexels-hitarth-jadhav-220357.jpg') center/cover no-repeat;
     }
 
-    @media only screen and (min-width: 900px) {
-        header {
-            font-size: 1.4rem;
-        }
-
-        header nav {
-            min-width: 60vw;
-        }
+    #hero-img button {
+        font-size: 1.5rem;
     }
 
-    @media only screen and (min-width: 1050px) {
-        header {
-            font-size: 1.5rem;
-        }
-
-        header nav {
-            min-width: 50vw;
-        }
-
-        header nav ul {
-            justify-content: space-between;
-        }
+    header nav ul {
+        display: flex;
+        justify-content: space-around;
     }
 
+    header nav ul li {
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    header nav ul li:hover {
+        transition: var(--transition);
+        color: var(--hoverColor);
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #hero-img {
+        font-size: 2.25rem;
+    }
+
+    #hero-img button {
+        font-size: 1.75rem
+    }
+
+    header {
+        font-size: 1.4rem;
+    }
+
+    .navicon {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #hero-img {
+        font-size: 2.5rem;
+    }
+
+    header {
+        font-size: 1.5rem;
+    }
+
+    header nav {
+        min-width: 50vw;
+    }
+
+    header nav ul {
+        justify-content: space-between;
+    }
+}
 
 
 
 
-    /* 
+
+/* 
 ========
 About
 ========
 */
 
-    @media only screen and (max-width: 650px) {
+@media only screen and (min-width: 320px) {
 
-        /* adjusted the rotation here with margins so the navicon button can be clicked without having the rotation interfere with the click */
-        #about {
-            color: var(--backgroundColor);
-            font-size: 2rem;
-            margin: 10vh 25vw 5vh;
-            text-align: center;
+    /* adjusted the rotation here with margins so the navicon button can be clicked without having the rotation interfere with the click */
+    #about {
+        color: var(--backgroundColor);
+        font-size: 2rem;
+        text-align: center;
+        width: 50%;
 
-            background-color: var(--primaryColor);
-            border-radius: 7px;
-            text-shadow: 1px 1px 10px #1ea9ff, 0 0 4px #1ea9ff;
-        }
-
-        .article-about {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: 5vh 5vw 0vh;
-        }
-
-        .article-about p {
-            width: 75vw;
-            text-align: start;
-            font-size: 1.35rem;
-        }
-
-        .profile-img {
-            border-radius: 50%;
-            width: 50%;
-            margin-bottom: 5vh;
-        }
+        background-color: var(--primaryColor);
+        border-radius: 7px;
+        text-shadow: 1px 1px 10px #1ea9ff, 0 0 4px #1ea9ff;
+        margin: 5vh auto;
     }
 
-    @media only screen and (min-width: 651px) {
-        #about {
-            color: var(--backgroundColorTwo);
-            font-size: 2.5rem;
-            margin-bottom: 5rem;
-            margin-left: 1rem;
-            transform: rotate(355deg);
-        }
-
-        .article-about {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 2.5rem;
-        }
-
-        .article-about img {
-            margin: 0 5rem;
-            justify-self: center;
-            align-self: center;
-        }
-
-        .article-about p {
-            width: 50vw;
-            font-size: 1.35rem;
-            margin-right: 3rem;
-        }
+    .article-about {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5vh 5vw 0vh;
+        row-gap: 5vh;
     }
 
-    @media only screen and (min-width: 900px) {
-        #about {
-            transform: rotate(357deg);
-        }
-
-        .article-about {
-            margin-top: 4rem;
-        }
-
-        .article-about img {
-            margin: 0 7rem;
-        }
-
-        .article-about p {
-            font-size: 1.6rem;
-        }
+    .article-about p {
+        width: 75vw;
+        text-align: start;
+        font-size: 1.35rem;
     }
 
-    @media only screen and (min-width: 1200px) {
-        #about {
-            font-size: 3.5rem;
-            margin-left: 2rem;
-        }
+    .profile-img {
+        border-radius: 50%;
+        height: auto;
+        width: 40%;
+    }
+}
 
-        .article-about p {
-            width: 40vw;
-        }
+@media only screen and (min-width: 720px) {
+    #about {
+        width: 35%;
     }
 
+    .article-about {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 2.5rem;
+    }
+
+    .article-about p {
+        width: 65vw;
+        font-size: 1.35rem;
+        margin-left: 5vw;
+    }
+
+    .profile-img {
+        margin: 0 5rem;
+        justify-self: center;
+        align-self: center;
+        width: 30%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    #about {
+        width: 25%;
+    }
+
+    .article-about {
+        margin-top: 4rem;
+    }
+
+    .article-about p {
+        font-size: 1.6rem;
+    }
+
+    .profile-img {
+        width: 25%;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    #about {
+        width: 25%;
+        margin: 0 auto;
+        margin-top: 10vh;
+    }
+
+    .article-about p {
+        width: 50vw;
+    }
+
+    .profile-img {
+        width: 20%;
+    }
+}
 
 
 
 
-    /* 
+
+/* 
 ========
 Skills
 ========
 */
 
-    @media only screen and (max-width: 650px) {
-        #skills {
-            color: var(--backgroundColor);
-            font-size: 2rem;
-            margin: 10vh 25vw 5vh;
-            text-align: center;
+@media only screen and (min-width: 320px) {
+    #skills {
+        color: var(--backgroundColor);
+        font-size: 2rem;
+        margin: 10vh 25vw 5vh;
+        text-align: center;
 
-            background-color: var(--primaryColor);
-            border-radius: 7px;
-            text-shadow: 1px 1px 10px #1ea9ff,
-                0 0 4px #1ea9ff;
-        }
+        background-color: var(--primaryColor);
+        border-radius: 7px;
+        text-shadow: 1px 1px 10px #1ea9ff,
+            0 0 4px #1ea9ff;
     }
+}
 
-    @media only screen and (min-width: 651px) {
-        .section-skills {
-            display: none;
-        }
+@media only screen and (min-width: 720px) {
+    .section-skills {
+        display: none;
     }
+}
 
-    @media only screen and (min-width: 900px) {}
+@media only screen and (min-width: 1024px) {}
 
-    @media only screen and (min-width: 1200px) {}
-
-
-
+@media only screen and (min-width: 1280px) {}
 
 
-    /* 
+
+
+
+/* 
 ========
 Portfolio
 ========
 */
 
-    @media only screen and (max-width: 650px) {
-        #portfolio {
-            color: var(--backgroundColor);
-            font-size: 2rem;
-            margin: 10vh 25vw 5vh;
-            text-align: center;
+@media only screen and (min-width: 320px) {
+    #portfolio {
+        color: var(--backgroundColor);
+        font-size: 2rem;
+        margin: 10vh 25vw 5vh;
+        text-align: center;
 
-            background-color: var(--primaryColor);
-            border-radius: 7px;
-            text-shadow: 1px 1px 10px #1ea9ff,
-                0 0 4px #1ea9ff;
-        }
+        background-color: var(--primaryColor);
+        border-radius: 7px;
+        text-shadow: 1px 1px 10px #1ea9ff,
+            0 0 4px #1ea9ff;
     }
+}
 
-    @media only screen and (min-width: 651px) {
-        .section-portfolio {
-            display: none;
-        }
+@media only screen and (min-width: 720px) {
+    .section-portfolio {
+        display: none;
     }
+}
 
-    @media only screen and (min-width: 900px) {}
+@media only screen and (min-width: 1024px) {}
 
-    @media only screen and (min-width: 1200px) {}
-
-
-
+@media only screen and (min-width: 1280px) {}
 
 
-    /* 
+
+
+
+/* 
 ========
 Contact
 ========
 */
 
-    @media only screen and (max-width: 650px) {
-        #contact {
-            color: var(--backgroundColor);
-            font-size: 2rem;
-            margin: 10vh 25vw 5vh;
-            text-align: center;
+@media only screen and (min-width: 320px) {
+    #contact {
+        color: var(--backgroundColor);
+        font-size: 2rem;
+        margin: 10vh 25vw 5vh;
+        text-align: center;
 
-            background-color: var(--primaryColor);
-            border-radius: 7px;
-            text-shadow: 1px 1px 10px #1ea9ff,
-                0 0 4px #1ea9ff;
-        }
+        background-color: var(--primaryColor);
+        border-radius: 7px;
+        text-shadow: 1px 1px 10px #1ea9ff,
+            0 0 4px #1ea9ff;
     }
-
-    @media only screen and (min-width: 651px) {
-        .section-contact {
-            display: none;
-        }
-    }
-
-    @media only screen and (min-width: 900px) {}
-
-    @media only screen and (min-width: 1200px) {}
 }
+
+@media only screen and (min-width: 720px) {
+    .section-contact {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {}
+
+@media only screen and (min-width: 1280px) {}
 
 
 
@@ -417,7 +438,6 @@ Footer
 
 footer {
     display: flex;
-    /* justify-content: ce; */
     background-color: var(--backgroundColorTwo);
     height: 10vh;
 }
@@ -433,7 +453,7 @@ footer ul {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    
+
     font-size: 1.5rem;
     width: 25vw;
     margin-left: 15vw;

@@ -317,8 +317,6 @@ About
 
 @media only screen and (min-width: 1280px) {
     #about {
-        width: 25%;
-        margin: 0 auto;
         margin-top: 10vh;
     }
 
@@ -371,31 +369,38 @@ Skills
 
 /* 
 ========
-Portfolio
+Projects
 ========
 */
 
 @media only screen and (min-width: 320px) {
-    #portfolio {
+    #projects {
         color: var(--backgroundColor);
         font-size: 2rem;
-        margin: 10vh 25vw 5vh;
+        width: 50%;
         text-align: center;
 
         background-color: var(--primaryColor);
         border-radius: 7px;
         text-shadow: 1px 1px 10px #1ea9ff,
             0 0 4px #1ea9ff;
+        margin: 5vh auto;
+
     }
 }
 
+/* need to make length of the projects bar the same as the about */
 @media only screen and (min-width: 720px) {
-    .section-portfolio {
-        display: none;
+    #projects {
+        width: 35%;
     }
 }
 
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+    #projects {
+        width: 25%;
+    }
+}
 
 @media only screen and (min-width: 1280px) {}
 
@@ -413,23 +418,29 @@ Contact
     #contact {
         color: var(--backgroundColor);
         font-size: 2rem;
-        margin: 10vh 25vw 5vh;
+        width: 50%;
         text-align: center;
 
         background-color: var(--primaryColor);
         border-radius: 7px;
         text-shadow: 1px 1px 10px #1ea9ff,
             0 0 4px #1ea9ff;
+        margin: 5vh auto;
+
     }
 }
 
 @media only screen and (min-width: 720px) {
-    .section-contact {
-        display: none;
+    #contact {
+        width: 35%;
     }
 }
 
-@media only screen and (min-width: 1024px) {}
+@media only screen and (min-width: 1024px) {
+    #contact {
+        width: 25%;
+    }
+}
 
 @media only screen and (min-width: 1280px) {}
 

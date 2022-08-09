@@ -12,6 +12,7 @@ Variables
     --secondaryColor: rgb(30, 169, 255);
     --primaryFont: Calibri, Verdana, sans-serif;
     --transition: all 0.5s linear;
+    --fastTransition: all 0.15s linear;
 }
 
 
@@ -143,12 +144,17 @@ Header/HeroImg
         justify-content: flex-end;
     }
 
-    .navicon {
+    #navicon {
         margin-top: 1.25vh;
         cursor: pointer;
+        transition: var(--transition);
     }
 
-    .navicon:active {
+    /* 
+    the #navicon:active is not needed but it makes the transition a little bit more smoother 
+    */
+    .active,
+    #navicon:active {
         transform: rotate(90deg);
         transition: var(--transition);
     }
@@ -189,7 +195,7 @@ Header/HeroImg
         font-size: 1.5rem
     }
 
-    .navicon {
+    #navicon {
         display: none;
     }
 }
@@ -224,7 +230,7 @@ About
 
 @media only screen and (min-width: 320px) {
 
-    /* adjusted the rotation here with margins so the navicon button can be clicked without having the rotation interfere with the click */
+    /* adjusted the rotation here with margins so the#navicon button can be clicked without having the rotation interfere with the click */
     #about {
         color: var(--backgroundColor);
         font-size: 2rem;

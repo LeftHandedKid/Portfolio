@@ -372,7 +372,15 @@ Projects
         text-shadow: 1px 1px 10px #1ea9ff,
             0 0 4px #1ea9ff;
         margin: 5vh auto;
+    }
 
+    .article-projects {
+        display: flex;
+        justify-content: center;
+    }
+
+    .article-projects a:hover {
+        border: 1px solid black;
     }
 }
 

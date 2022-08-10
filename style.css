@@ -164,16 +164,14 @@ Header/HeroImg/Menu
 
     .menu {
         transition: var(--transition);
-        width: 98vw;
+        width: 100vw;
         height: 90vh;
         background-color: var(--primaryColor);
 
         display: block;
         position: absolute;
-        margin-top: 98vh;
+        margin-top: 100vh;
         /*always 10vh more than height to get bottom of the navbar placement*/
-        /* margin-left: 46vw; */
-        opacity: 95%;
     }
 }
 

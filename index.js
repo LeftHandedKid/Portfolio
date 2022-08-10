@@ -5,6 +5,12 @@ const navbar = document.querySelector(".navbar");
 const navicon = document.querySelector("#navicon")
 const menu = document.createElement("menu");
 
+// items to be placed on the navicon menu
+const menuList = document.querySelector(".nav-list");
+
+console.log(menuList);
+
+
 // update portfolio with current year (year located in footer)
 currentYear = new Date().getFullYear();
 date.textContent = currentYear;
@@ -16,7 +22,7 @@ exploreButton.addEventListener("click", () => {
 
 // have navicon hold its position (on or off)
 navicon.addEventListener("click", () => {
-    // if the navicon button is pressed, the window will scroll down to the menu, but the scroll will not occur if the page is passed the header
+    // if the navicon button is pressed, the window will scroll down to the menu, but the scroll will not occur if the window is passed the header
     if (window.scrollY <= 739.5999755859375) {
         navicon.scrollIntoView({ behavior: "smooth", block: "start" });
     };
@@ -34,4 +40,5 @@ navicon.addEventListener("click", () => {
     };
 });
 
+menu.appendChild(menuList);
 

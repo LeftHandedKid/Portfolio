@@ -5,7 +5,7 @@ Variables
 */
 
 :root {
-    --backgroundColor: whitesmoke;
+    --backgroundColor: rgb(245, 245, 245);
     --backgroundColorTwo: rgb(0, 0, 0);
     --hoverColor: rgb(180, 226, 255);
     --primaryColor: rgba(0, 0, 0, 0.85);
@@ -258,7 +258,6 @@ About
 
         background-color: var(--primaryColor);
         border-radius: 7px;
-        text-shadow: 1px 1px 10px #1ea9ff, 0 0 4px #1ea9ff;
         margin: 5vh auto;
     }
 
@@ -360,8 +359,6 @@ Skills
 
         background-color: var(--primaryColor);
         border-radius: 7px;
-        text-shadow: 1px 1px 10px #1ea9ff,
-            0 0 4px #1ea9ff;
     }
 }
 
@@ -394,8 +391,6 @@ Projects
 
         background-color: var(--primaryColor);
         border-radius: 7px;
-        text-shadow: 1px 1px 10px #1ea9ff,
-            0 0 4px #1ea9ff;
         margin: 5vh auto;
     }
 
@@ -443,8 +438,6 @@ Contact
 
         background-color: var(--primaryColor);
         border-radius: 7px;
-        text-shadow: 1px 1px 10px #1ea9ff,
-            0 0 4px #1ea9ff;
         margin: 5vh auto;
 
     }

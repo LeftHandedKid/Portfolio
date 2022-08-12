@@ -66,7 +66,7 @@ Header/HeroImg/Menu
         height: 105vh;
         font-size: 1.75rem;
         background-color: var(--backgroundColorTwo);
-        background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)),
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.45)),
             url('./images/pexels-hitarth-jadhav-220357.jpg') center/cover no-repeat;
     }
 
@@ -75,9 +75,15 @@ Header/HeroImg/Menu
         margin-bottom: 10vh;
     }
 
+    #hero-img h2,
+    #hero-img p {
+        background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8))
+    }
+
     #hero-img button {
-        background: none;
-        border: 1px solid var(--secondaryColor);
+        /* background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)); */
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 2px solid var(--secondaryColor);
         border-radius: 3px;
 
         font-size: 1.25rem;
@@ -177,6 +183,7 @@ Header/HeroImg/Menu
         /*always 10vh more than height to get bottom of the navbar placement*/
     }
 
+    /* set viewheight to current viewing material and cut off everything else to have no scroll */
     .menu-scroll-stop {
         height: 100%;
         overflow: hidden;

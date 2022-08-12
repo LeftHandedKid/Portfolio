@@ -8,9 +8,6 @@ const menu = document.createElement("menu");
 // items to be placed on the navicon menu
 const menuList = document.querySelector(".nav-list");
 
-console.log(menuList);
-
-
 // update portfolio with current year (year located in footer)
 currentYear = new Date().getFullYear();
 date.textContent = currentYear;
@@ -27,18 +24,31 @@ navicon.addEventListener("click", () => {
         navicon.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
-    // toggles the active class for the navicon
+    // toggles the active class for the navicon to have the navicon on
     navicon.classList.toggle("active");
 
     // show the menu when navicon is on
     if (navicon.classList.contains("active")) {
+        // menu css is added to menu html element
+        // the menu html element is then added to the end of the navbar
         menu.classList.add("menu");
         navbar.insertAdjacentElement("afterend", menu);
-        // DO NOT show the menu when navicon is off
+
+        // have scrolling disabled when the menu is open
+        document.body.classList.add("menu-scroll-stop");
+
     } else {
+        // DO NOT show the menu when navicon is off
         menu.remove();
+
+        // re-enable scrolling once more
+        document.body.classList.remove("menu-scroll-stop");
     };
+
 });
 
+// add the menu items onto the menu
 menu.appendChild(menuList);
+
+
 

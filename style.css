@@ -176,6 +176,11 @@ Header/HeroImg/Menu
         margin-top: 100vh;
         /*always 10vh more than height to get bottom of the navbar placement*/
     }
+
+    .menu-scroll-stop {
+        height: 100%;
+        overflow: hidden;
+    }
 }
 
 @media only screen and (min-width: 720px) {

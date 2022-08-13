@@ -61,5 +61,3 @@ navicon.addEventListener("click", () => {
 // add the menu items onto the menu
 menu.appendChild(menuList);
 
-
-

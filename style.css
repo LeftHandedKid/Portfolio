@@ -576,3 +576,11 @@ footer ul {
 footer ul li a {
     color: var(--secondaryColor);
 }
+
+footer ul li a:hover {
+    color: var(--hoverColor);
+}
+
+footer ul li a:active {
+    color: var(--secondaryColor);
+}

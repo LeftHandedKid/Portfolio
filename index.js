@@ -5,6 +5,11 @@ const navbar = document.querySelector(".navbar");
 const navicon = document.querySelector("#navicon")
 const menu = document.createElement("menu");
 
+// menu option variables 
+const about = document.querySelector("#about");
+const projects = document.querySelector("#projects");
+const contact = document.querySelector("#contact");
+
 // items to be placed on the navicon menu
 const menuList = document.querySelector(".nav-list");
 
@@ -34,12 +39,18 @@ navicon.addEventListener("click", () => {
         menu.classList.add("menu");
         navbar.insertAdjacentElement("afterend", menu);
 
+        // ensure the menu can open
+        menu.classList.remove("menu-close");
+
         // have scrolling disabled when the menu is open
         document.body.classList.add("menu-scroll-stop");
 
     } else {
         // DO NOT show the menu when navicon is off
-        menu.remove();
+        // menu.remove();
+        menu.classList.remove("menu");
+        menu.classList.add("menu-close");
+
 
         // re-enable scrolling once more
         document.body.classList.remove("menu-scroll-stop");

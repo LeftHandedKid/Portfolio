@@ -11,6 +11,7 @@ Variables
     --primaryColor: rgba(0, 0, 0, 0.85);
     --secondaryColor: rgb(30, 169, 255);
     --primaryFont: Calibri, Verdana, sans-serif;
+    --slowTransition: all 0.72s linear;
     --transition: all 0.5s linear;
     --fastTransition: all 0.15s linear;
 }
@@ -156,9 +157,11 @@ Header/HeroImg/Menu
     #navicon {
         margin-top: 1.25vh;
         margin-right: 2.5vw;
-        /* margin-right helps on smaller screens when navicon is changing positions to not have width scrollbar appear since the navicon is so close to the edge */
+        /*
+        margin-right helps on smaller screens when navicon is changing positions to not have width scroll bar appear since the navicon is so close to the edge 
+        */
         cursor: pointer;
-        transition: var(--transition);
+        transition: var(--slowTransition);
     }
 
     /* 
@@ -172,15 +175,95 @@ Header/HeroImg/Menu
     }
 
     .menu {
-        transition: var(--transition);
         width: 100vw;
         height: 90vh;
         background-color: rgba(0, 0, 0, 0.90);
-
         display: block;
         position: absolute;
         margin-top: 100vh;
-        /*always 10vh more than height to get bottom of the navbar placement*/
+        /*
+        always 10vh more than height to get bottom of the navbar placement
+        */
+        -webkit-animation-name: slide-menu;
+        animation-name: slide-menu;
+        -webkit-animation-duration: 0.75s;
+        animation-duration: 0.75s;
+    }
+
+    .menu-close {
+        width: 100vw;
+        height: 90vh;
+        background-color: rgba(0, 0, 0, 0.90);
+        display: block;
+        position: absolute;
+        margin-top: 100vh;
+
+        -webkit-animation-name: slide-menu-close;
+        animation-name: slide-menu-close;
+        -webkit-animation-direction: reverse;
+        animation-direction: reverse;
+        -webkit-animation-duration: 0.75s;
+        animation-duration: 0.75s;
+
+        /*
+        this sets the menu scale to zero meaning it cannot be seen after the transition is finished above
+        */
+        transform: scale(0);
+    }
+
+    @-webkit-keyframes slide-menu {
+        from {
+            transform: translateX(-100vw);
+        }
+
+        /* note that the animation moves the menu to cover the width of the device! */
+        to {
+            transform: translateX(0vw);
+        }
+    }
+
+    @-webkit-keyframes slide-menu {
+        from {
+            transform: translateX(-100vw);
+        }
+
+        /* note that the animation moves the menu to cover the width of the device! */
+        to {
+            transform: translateX(0vw);
+        }
+    }
+
+    @keyframes slide-menu {
+        from {
+            transform: translateX(-100vw);
+        }
+
+        /* note that the animation moves the menu to cover the width of the device! */
+        to {
+            transform: translateX(0vw);
+        }
+    }
+
+    @-webkit-keyframes slide-menu-close {
+        from {
+            transform: translateX(-100vw);
+        }
+
+        /* note that the animation moves the menu to cover the width of the device! */
+        to {
+            transform: translateX(0vw);
+        }
+    }
+
+    @keyframes slide-menu-close {
+        from {
+            transform: translateX(-100vw);
+        }
+
+        /* note that the animation moves the menu to cover the width of the device! */
+        to {
+            transform: translateX(0vw);
+        }
     }
 
     /* set viewheight to current viewing material and cut off everything else to have no scroll */
@@ -250,7 +333,7 @@ About
 @media only screen and (min-width: 320px) {
 
     /* adjusted the rotation here with margins so the#navicon button can be clicked without having the rotation interfere with the click */
-    #about {
+    .about {
         color: var(--backgroundColor);
         font-size: 2rem;
         text-align: center;
@@ -283,7 +366,7 @@ About
 }
 
 @media only screen and (min-width: 720px) {
-    #about {
+    .about {
         width: 35%;
     }
 
@@ -309,7 +392,7 @@ About
 }
 
 @media only screen and (min-width: 1024px) {
-    #about {
+    .about {
         width: 25%;
     }
 
@@ -327,7 +410,7 @@ About
 }
 
 @media only screen and (min-width: 1280px) {
-    #about {
+    .about {
         margin-top: 10vh;
     }
 
@@ -383,7 +466,7 @@ Projects
 */
 
 @media only screen and (min-width: 320px) {
-    #projects {
+    .projects {
         color: var(--backgroundColor);
         font-size: 2rem;
         width: 50%;
@@ -406,13 +489,13 @@ Projects
 
 /* need to make length of the projects bar the same as the about */
 @media only screen and (min-width: 720px) {
-    #projects {
+    .projects {
         width: 35%;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    #projects {
+    .projects {
         width: 25%;
     }
 }
@@ -430,7 +513,7 @@ Contact
 */
 
 @media only screen and (min-width: 320px) {
-    #contact {
+    .contact {
         color: var(--backgroundColor);
         font-size: 2rem;
         width: 50%;
@@ -444,13 +527,13 @@ Contact
 }
 
 @media only screen and (min-width: 720px) {
-    #contact {
+    .contact {
         width: 35%;
     }
 }
 
 @media only screen and (min-width: 1024px) {
-    #contact {
+    .contact {
         width: 25%;
     }
 }

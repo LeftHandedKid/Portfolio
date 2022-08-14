@@ -50,14 +50,7 @@ a {
     text-decoration: none;
 }
 
-a:visited {
-    color: var(--hoverColor);
-}
 
-a:hover {
-    color: var(--secondaryColor);
-    transition: var(--fastTransition);
-}
 
 
 
@@ -339,6 +332,12 @@ Header/HeroImg/Menu
         background-color: var(--secondaryColor);
         cursor: pointer;
     }
+
+    #hero-img button:active {
+        background-color: var(--hoverColor);
+        color: var(--backgroundColorTwo);
+        border: 1px solid var(--secondaryColor);
+    }
 }
 
 
@@ -603,9 +602,5 @@ footer ul li a:hover {
 }
 
 footer ul li a:active {
-    color: var(--secondaryColor);
-}
-
-footer ul li a:visited {
     color: var(--secondaryColor);
 }

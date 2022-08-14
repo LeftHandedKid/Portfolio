@@ -86,7 +86,3 @@ for (let i = 0; i < menuOptions.length; i++) {
     });
 };
 
-// when menuOptions is selected, close the menu
-
-
-

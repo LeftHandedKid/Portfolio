@@ -10,6 +10,15 @@ const about = document.querySelector("#about");
 const projects = document.querySelector("#projects");
 const contact = document.querySelector("#contact");
 
+// header variables
+const aboutHeader = document.querySelector(".about");
+const projectHeader = document.querySelector(".projects");
+const contactHeader = document.querySelector(".contact");
+
+// arrays of menu option and header variables
+const menuOptions = [about, projects, contact];
+const menuHeaders = [aboutHeader, projectHeader, contactHeader];
+
 // items to be placed on the navicon menu
 const menuList = document.querySelector(".nav-list");
 
@@ -60,4 +69,15 @@ navicon.addEventListener("click", () => {
 
 // add the menu items onto the menu
 menu.appendChild(menuList);
+
+// iterate through menuOptions to scroll to menuHeader with respective menuOption to menuHeader name
+for (let i = 0; i < menuOptions.length; i++) {
+    // add class to have additional scrolling height
+    menuHeaders[i].classList.add(["scroll-to-header"]);
+
+    menuOptions[i].addEventListener("click", () => {
+        menuHeaders[i].scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+};
+
 

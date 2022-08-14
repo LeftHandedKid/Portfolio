@@ -13,7 +13,7 @@ Variables
     --primaryFont: Calibri, Verdana, sans-serif;
     --slowTransition: all 0.72s linear;
     --transition: all 0.5s linear;
-    --fastTransition: all 0.15s linear;
+    --fastTransition: all 0.25s linear;
 }
 
 
@@ -46,7 +46,18 @@ ul {
     list-style-type: none;
 }
 
+a {
+    text-decoration: none;
+}
 
+a:visited {
+    color: var(--hoverColor);
+}
+
+a:hover {
+    color: var(--secondaryColor);
+    transition: var(--fastTransition);
+}
 
 
 
@@ -94,6 +105,7 @@ Header/HeroImg/Menu
 
     #hero-img button:hover {
         background-color: var(--secondaryColor);
+        cursor: pointer;
     }
 
     #hero-img button:active {
@@ -113,7 +125,6 @@ Header/HeroImg/Menu
 
         background-color: var(--backgroundColorTwo);
         height: 10vh;
-        z-index: 2;
         font-size: 1rem;
         margin-bottom: 10vh;
     }
@@ -270,6 +281,12 @@ Header/HeroImg/Menu
     .menu-scroll-stop {
         height: 100%;
         overflow: hidden;
+    }
+
+    /* the javascript scrollIntoView does not scroll all the way to the top of the header, so this adds additional viewheight to the scrollIntoView javascript code by adding this as a class to the element */
+    .scroll-to-header {
+        scroll-snap-margin-top: 20vh;
+        scroll-margin-top: 20vh;
     }
 }
 

@@ -31,7 +31,7 @@ exploreButton.addEventListener("click", () => {
     navbar.scrollIntoView({ behavior: "smooth", block: "start" });
 });
 
-// have navicon hold its position (on or off)
+// have navicon hold its position (on or off) and open or close the menu
 navicon.addEventListener("click", () => {
     // if the navicon button is pressed, the window will scroll down to the menu, but the scroll will not occur if the window is passed the header
     if (window.scrollY <= 739.5999755859375) {
@@ -60,7 +60,6 @@ navicon.addEventListener("click", () => {
         menu.classList.remove("menu");
         menu.classList.add("menu-close");
 
-
         // re-enable scrolling once more
         document.body.classList.remove("menu-scroll-stop");
     };
@@ -75,9 +74,18 @@ for (let i = 0; i < menuOptions.length; i++) {
     // add class to have additional scrolling height
     menuHeaders[i].classList.add(["scroll-to-header"]);
 
+    // scroll to header when menuOption is clicked
     menuOptions[i].addEventListener("click", () => {
         menuHeaders[i].scrollIntoView({ behavior: "smooth", block: "start" });
+
+        // when a menuOption is clicked, close menu and revert navicon back to normal position
+        navicon.classList.remove("active");
+        menu.classList.remove("menu");
+        menu.classList.add("menu-close");
     });
 };
+
+// when menuOptions is selected, close the menu
+
 
 

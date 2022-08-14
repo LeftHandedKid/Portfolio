@@ -285,8 +285,8 @@ Header/HeroImg/Menu
 
     /* the javascript scrollIntoView does not scroll all the way to the top of the header, so this adds additional viewheight to the scrollIntoView javascript code by adding this as a class to the element */
     .scroll-to-header {
-        scroll-snap-margin-top: 19.3vh;
-        scroll-margin-top: 19.3vh;
+        scroll-snap-margin-top: 18.8vh;
+        scroll-margin-top: 18.8vh;
     }
 }
 

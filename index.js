@@ -78,10 +78,11 @@ for (let i = 0; i < menuOptions.length; i++) {
     menuOptions[i].addEventListener("click", () => {
         menuHeaders[i].scrollIntoView({ behavior: "smooth", block: "start" });
 
-        // when a menuOption is clicked, close menu and revert navicon back to normal position
+        // when a menuOption is clicked, close menu and revert navicon back to normal position and enable scrolling
         navicon.classList.remove("active");
         menu.classList.remove("menu");
         menu.classList.add("menu-close");
+        document.body.classList.remove("menu-scroll-stop");
     });
 };
 

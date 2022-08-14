@@ -500,6 +500,7 @@ Projects
     .article-projects {
         display: flex;
         justify-content: center;
+        transform: scale(0.7, 0.7);
     }
 
     .article-projects a:hover {
@@ -512,6 +513,10 @@ Projects
     .projects {
         width: 35%;
     }
+
+    /* .article-projects {
+        transform: scale(0.8, 0.8);
+    } */
 }
 
 @media only screen and (min-width: 1024px) {
@@ -520,11 +525,7 @@ Projects
     }
 }
 
-@media only screen and (min-width: 1280px) {
-    .article-projects {
-        transform: scale(0.8, 0.8);
-    }
-}
+@media only screen and (min-width: 1280px) {}
 
 
 

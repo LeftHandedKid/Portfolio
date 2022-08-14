@@ -103,11 +103,6 @@ Header/HeroImg/Menu
         padding: 0.5rem 1rem;
     }
 
-    #hero-img button:hover {
-        background-color: var(--secondaryColor);
-        cursor: pointer;
-    }
-
     #hero-img button:active {
         background-color: var(--hoverColor);
         color: var(--backgroundColorTwo);
@@ -338,6 +333,11 @@ Header/HeroImg/Menu
 
     header nav ul {
         justify-content: space-between;
+    }
+
+    #hero-img button:hover {
+        background-color: var(--secondaryColor);
+        cursor: pointer;
     }
 }
 

@@ -114,6 +114,10 @@ Header/HeroImg/Menu
         border: 1px solid var(--secondaryColor);
     }
 
+    #hero-img button:visited {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
     header {
         display: flex;
         justify-content: space-around;

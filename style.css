@@ -605,3 +605,7 @@ footer ul li a:hover {
 footer ul li a:active {
     color: var(--secondaryColor);
 }
+
+footer ul li a:visited {
+    color: var(--secondaryColor);
+}

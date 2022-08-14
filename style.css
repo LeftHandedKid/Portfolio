@@ -500,7 +500,13 @@ Projects
     .article-projects {
         display: flex;
         justify-content: center;
-        transform: scale(0.7, 0.7);
+    }
+
+    .article-projects img {
+        /* transform rewrites the z-index so position relative is important to use,to control the z-index again.this lets the images stay below the menu when the menu is being used */
+        position: relative;
+        z-index: -1;
+        transform: scale(0.8, 0.8);
     }
 
     .article-projects a:hover {
